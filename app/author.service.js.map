@@ -1,0 +1,1 @@
+{"version":3,"file":"author.service.js","sourceRoot":"","sources":["author.service.ts"],"names":["AuthorService","AuthorService.constructor","AuthorService.getAuthors"],"mappings":";;;;;YAAA;gBAAAA;gBAICC,CAACA;gBAHED,kCAAUA,GAAVA;oBACIE,MAAMA,CAACA,CAACA,SAASA,EAACA,SAASA,EAACA,SAASA,CAACA,CAACA;gBAC3CA,CAACA;gBACJF,oBAACA;YAADA,CAACA,AAJF,IAIE;YAJF,yCAIE,CAAA"}

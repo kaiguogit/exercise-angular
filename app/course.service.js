@@ -1,19 +1,17 @@
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    var CourseSerivce;
+System.register([], function(exports_1) {
+    var CourseService;
     return {
         setters:[],
         execute: function() {
-            CourseSerivce = (function () {
-                function CourseSerivce() {
+            CourseService = (function () {
+                function CourseService() {
                 }
-                CourseSerivce.prototype.getCourses = function () {
-                    return ["Course1", "Course2", "Course3"];
+                CourseService.prototype.getCourses = function () {
+                    return ["Course1", "Course2", "Course3", "Course4"];
                 };
-                return CourseSerivce;
-            }());
-            exports_1("CourseSerivce", CourseSerivce);
+                return CourseService;
+            })();
+            exports_1("CourseService", CourseService);
         }
     }
 });

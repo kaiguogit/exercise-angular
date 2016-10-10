@@ -1,6 +1,4 @@
-System.register(['angular2/core', './course.service'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['angular2/core', './course.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23,7 +21,7 @@ System.register(['angular2/core', './course.service'], function(exports_1, conte
         execute: function() {
             CoursesComponent = (function () {
                 function CoursesComponent(courseService) {
-                    this.title = "TItle title of courses page";
+                    this.title = " title of courses page";
                     this.courses = courseService.getCourses();
                 }
                 CoursesComponent = __decorate([
@@ -32,11 +30,10 @@ System.register(['angular2/core', './course.service'], function(exports_1, conte
                         template: "<h2>{{title}}</h2>\n     <ul>\n         <li *ngFor=\"#course of courses\">\n            {{ course}}\n         </li>\n     </ul>",
                         providers: [course_service_1.CourseService]
                     }), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof course_service_1.CourseService !== 'undefined' && course_service_1.CourseService) === 'function' && _a) || Object])
+                    __metadata('design:paramtypes', [course_service_1.CourseService])
                 ], CoursesComponent);
                 return CoursesComponent;
-                var _a;
-            }());
+            })();
             exports_1("CoursesComponent", CoursesComponent);
         }
     }

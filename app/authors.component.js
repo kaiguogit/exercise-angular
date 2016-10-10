@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component'], function(exports_1) {
+System.register(["angular2/core", "./author.service"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,35 +8,34 @@ System.register(['angular2/core', './courses.component', './authors.component'],
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1;
-    var AppComponent;
+    var core_1, author_service_1;
+    var AuthorsComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (courses_component_1_1) {
-                courses_component_1 = courses_component_1_1;
-            },
-            function (authors_component_1_1) {
-                authors_component_1 = authors_component_1_1;
+            function (author_service_1_1) {
+                author_service_1 = author_service_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            AuthorsComponent = (function () {
+                function AuthorsComponent(authorService) {
+                    this.title = "author title of page";
+                    this.authors = authorService.getAuthors();
                 }
-                AppComponent = __decorate([
+                AuthorsComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: "<h1>Hello ANgula</h1>\n    <courses></courses>\n    <authors></authors>",
-                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent]
+                        selector: 'authors',
+                        template: "<h2>{{title}}</h2>\n    <ul>\n        <li *ngFor=\"#author of authors\">\n            {{author}}\n        </li>\n    </ul>\n    ",
+                        providers: [author_service_1.AuthorService]
                     }), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                    __metadata('design:paramtypes', [author_service_1.AuthorService])
+                ], AuthorsComponent);
+                return AuthorsComponent;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("AuthorsComponent", AuthorsComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=authors.component.js.map
